@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    body {
+      min-height: 100%;
+      min-width: 100%;
+      background: transparent url(pattern-background-desktop.svg) center top no-repeat;
+    }
+
+    html {
+      background-color: hsl(225, 100%, 94%);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      width: 375px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+
+    .top-img img {
+      border-radius: 10px 10px 0px 0px;
+      width: 375px;
+    }
+
+    .text {
+      text-align: center;
+    }
+
+    .text h2 {
+      margin-top: 13px;
+      padding: 18px;
+      font-weight: 900;
+      color: hsl(223, 47%, 23%);
+    }
+
+    .text p {
+      color: hsl(224, 23%, 55%);
+      padding: 0 10px;
+      padding-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .left-side {
+      display: flex;
+    }
+
+    .music-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 5px 20px;
+      padding: 15px 20px;
+      background-color: hsl(225, 100%, 98%);
+      border-radius: 10px;
+      margin-bottom: 25px;
+    }
+
+    .link a {
+      color: hsl(245, 75%, 52%);
+      font-weight: 700;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+
+    .title p {
+      color: hsl(224, 23%, 55%);
+    }
+
+    .title h4{
+      color: hsl(223, 47%, 23%);
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 35px;
+    }
+
+    .procced-btn button {
+      background-color: hsl(245, 75%, 52%);
+      color: #fff;
+      border: 0px;
+      border-radius: 7px;
+      width: 325px;
+      padding: 10px 15px;
+      font-weight: 700;
+      font-size: 16px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    }
+
+    .procced-btn {
+      margin-bottom: 25px;
+    }
+
+    .cancel-btn button {
+      padding: 10px 15px;
+      font-weight: 700;
+      font-size: 16px;
+      border: 0px;
+      background-color: transparent;
+      color: hsl(224, 23%, 55%);
+    }
+
+    .profile {
+      margin-top: 35px;
+      font-weight: 700;
+      color: hsl(224, 23%, 55%);
+      text-align: center;
+    }
+    .profile a{
+      cursor: pointer;
+      color: hsl(245, 75%, 52%);
+    }
+
+    /* HOVER */
+    .link a:hover, .procced-btn button:hover, .profile a:hover{
+      cursor: pointer;
+      opacity: 70%;
+    }
+    .link a:hover, .profile a:hover{
+      text-decoration: none;
+    }
+    .cancel-btn button:hover{
+      color: hsl(223, 47%, 23%);
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="card">
+      <div class="top-img">
+        <img src="illustration-hero.svg" alt="hero-illustration">
+      </div>
+      <div class="text">
+        <h2>Order Summary</h2>
+        <p>You can now listen to millions of songs, audiobooks, and podcasts on any
+          device anywhere you like!</p>
+      </div>
+      <div class="music-card">
+        <div class="left-side">
+          <div class="icon">
+            <img src="icon-music.svg" alt="icon-music">
+          </div>
+          <div class="title">
+            <h4>Annual Plan</h4>
+            <p>$59.99/year</p>
+          </div>
+        </div>
+        <div class="link">
+          <a href="#">Change</a>
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="procced-btn">
+          <button>Procced to Payment</button>
+        </div>
+        <div class="cancel-btn">
+          <button>Cancel Order</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="profile">
+      Made by: Omar Dakelbab <br>
+      <a href="https://www.instagram.com/omar_frontend/">@omar_frontend</a>
+    </div>
+  </main>
+
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>
